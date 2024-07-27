@@ -1,0 +1,25 @@
+.slick-dots {
+  bottom: 5px; /* Nuqtalarning pastki masofasini sozlash */
+  text-align: center; /* Nuqtalarni markazga joylashtirish */
+}
+
+.slick-dots li {
+  margin: 0 1px; /* Nuqtalar orasidagi masofani sozlash */
+}
+
+.slick-dots li button:before {
+  width: 8px;
+  height: 8px;
+  background-color: white; /* Nuqtalarning fon rangi */
+  border-radius: 50%; /* Yuvarlak nuqtalar */
+  content: ""; /* `button:before` pseudoelementining kontenti */
+  display: inline-block; /* Nuqtalarni yonma-yon joylashtirish */
+  transition: width 0.3s ease-in-out, background-color 0.3s ease; /* Animatsiya */
+}
+
+.slick-dots .slick-active button:before {
+  background-color: #fff; /* Active bo'lgan nuqtaning fon rangi */
+  width: 18px; /* Active bo'lgan nuqtaning kengligi */
+  height: 8px; /* Active bo'lgan nuqtaning bo'yi */
+  border-radius: 4px; /* Yuvarlak nuqtaning radiusi */
+}
