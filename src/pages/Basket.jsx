@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Data } from "../db/data";
 import Footer from "../components/Footer";
@@ -9,6 +9,10 @@ import del from "/assets/delicon.svg";
 import EmptyBasket from "../components/EmptyBasket";
 
 const Basket = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1); // -1 degani avvalgi sahifaga qaytadi

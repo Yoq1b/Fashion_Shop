@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "../components/Navbar";
 import CarouselComponent from "../components/CarouselComponent";
 import Slider from "../components/Slider";
@@ -10,6 +10,10 @@ import Discount from "../components/Discount";
 import SearchComp from "../components/SearchComp";
 
 const Home = () => {
+ useEffect(() => {
+   window.scroll(0, 0);
+ }, []);
+
   return (
     <>
       <div className="pb-[80px]">

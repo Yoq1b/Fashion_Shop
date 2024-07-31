@@ -41,7 +41,7 @@ const SearchComp = () => {
           </select>
           {/* -------- */}
           {searchTerm && (
-            <div className="absolute left-0 top-[40px] w-full border bg-[#140D2B] rounded-[10px] shadow-lg max-h-[100px] overflow-y-auto">
+            <div className="absolute left-0 z-50 top-[40px] w-full border bg-[#140D2B] rounded-[10px] shadow-lg max-h-[100px] overflow-y-auto">
               {filteredData.map((item) => (
                 <NavLink to="/singleproduct" key={item.id}>
                   <div

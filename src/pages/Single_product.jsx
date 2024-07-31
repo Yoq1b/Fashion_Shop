@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import star from "/assets/star.svg";
 import basket from "/assets/basket.svg";
@@ -18,6 +18,9 @@ import ControlledAccordions from "../components/ControlledAccordions";
 import Similiar_products from "../components/Similiar_products";
 
 const Single_product = () => {
+   useEffect(() => {
+     window.scroll(0, 0);
+   }, []);
   const navigate = useNavigate();
 
   const handleBack = () => {

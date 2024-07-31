@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { NavLink, useNavigate } from "react-router-dom";
 import Deliver from "../components/Deliver";
@@ -7,6 +7,10 @@ import Total from "../components/Total";
 import Footer from "../components/Footer";
 
 const Checkout = () => {
+ useEffect(() => {
+   window.scroll(0, 0);
+ }, []);
+
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1); // -1 degani avvalgi sahifaga qaytadi

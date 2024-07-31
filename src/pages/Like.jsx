@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Data } from "../db/data";
 import Footer from "../components/Footer";
@@ -9,6 +9,10 @@ import EmptyLike from "../components/EmptyLike";
 import bbasket from "/assets/bbasket.svg";
 
 const Like = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1); // -1 degani avvalgi sahifaga qaytadi
@@ -101,7 +105,10 @@ const Like = () => {
               ) : null;
             })}
           {likedd.length > 0 && (
-            <NavLink to="/basket" className="w-full px-[10px] fixed bottom-[70px]">
+            <NavLink
+              to="/basket"
+              className="w-full px-[10px] fixed bottom-[70px]"
+            >
               <div className="w-full border h-[56px] bg-white rounded-[36px] flex items-center justify-center gap-[5px]">
                 <img src={bbasket} alt="" />
                 <p className="text-black font-medium font-poppins text-[16px]">
