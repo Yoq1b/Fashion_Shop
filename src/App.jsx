@@ -11,6 +11,7 @@ import Single_product from "./pages/Single_product";
 import Tops from "./pages/Tops";
 import Like from "./pages/Like";
 import ShopByCategory from "./pages/ShopByCategory";
+import Search from "./pages/Search";
 
 export const LikeContext = createContext();
 export const ShopContext = createContext();
@@ -39,6 +40,7 @@ function App() {
                       <Route path="/basket" element={<Basket />} />
                       <Route path="/cart" element={<Cart />} />
                       <Route path="/category" element={<Category />} />
+                      <Route path="/search" element={<Search />} />
                       <Route
                         path="/shopbycategory"
                         element={<ShopByCategory />}

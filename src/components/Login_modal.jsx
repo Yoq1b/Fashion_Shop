@@ -33,7 +33,7 @@ const Login_modal = ({ handlevoyti }) => {
 
       // setUserInfo ni o'zgartirish
       setUserInfo({ name, surname, phone, email, data });
-      navigate("/account");
+      navigate("/profile");
       handlevoyti();
     }
   };

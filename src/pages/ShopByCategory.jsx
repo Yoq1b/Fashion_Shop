@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Search from "../components/Search";
+import Search from "../components/SearchComp";
 import Categories from "../components/Categories";
 import TopsProduct from "../components/TopsProduct";
 import Footer from "../components/Footer";

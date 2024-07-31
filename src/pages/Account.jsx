@@ -20,6 +20,10 @@ import Data_modal from "../components/Data_modal";
 import { IoExitOutline } from "react-icons/io5";
 
 const Account = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1); // -1 degani avvalgi sahifaga qaytadi
@@ -158,9 +162,9 @@ const Account = () => {
               <div
                 className={`${
                   showDetails ? "block" : "hidden"
-                } absolute bottom-[-65px] left-[-10px] w-[100px] h-[62px] bg-transparent bg-slate-300 rounded-[5px]`}
+                } absolute bottom-[-65px] left-[-10px] w-[100px] z-50 h-[62px] bg-[#080020] rounded-[5px]`}
               >
-                <div className="relative bg-slate-500 py-[7px] rounded-tl-[5px] rounded-tr-[5px] cursor-pointer">
+                <div className="relative bg-slate-500 z-50 py-[7px] rounded-tl-[5px] rounded-tr-[5px] cursor-pointer">
                   <p className="text-[#fff] hover:cursor-pointer capitalize text-[12px] font-normal text-center">
                     Upload photo
                   </p>
@@ -170,12 +174,14 @@ const Account = () => {
                     onChange={handleFileChange}
                   />
                 </div>
-                <p
-                  className="text-[#C13515] hover:cursor-pointer mt-[5px] capitalize text-[12px] font-normal text-center"
-                  onClick={handleDeletePhoto}
-                >
-                  Delete photo
-                </p>
+                <div className="w-full bg-[#080020]">
+                  <p
+                    className="text-[#C13515] hover:cursor-pointer mt-[5px] capitalize text-[12px] font-normal text-center"
+                    onClick={handleDeletePhoto}
+                  >
+                    Delete photo
+                  </p>
+                </div>
               </div>
             </div>
             {/* ------ */}

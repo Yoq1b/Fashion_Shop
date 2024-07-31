@@ -15,7 +15,7 @@ const Footer = () => {
     const storedUserInfo = localStorage.getItem("userInfo");
     if (storedUserInfo) {
       // localStorage da ma'lumot mavjud bo'lsa, login sahifasiga yo'naltirish
-      navigate("/account");
+      navigate("/profile");
     } else {
       // localStorage bo'sh bo'lsa setIslogin(true)
       setIslogin(true);
@@ -33,7 +33,7 @@ const Footer = () => {
           <NavLink to="/">
             <img src={home} alt="rasm" className="w-[24px] h-[24px]" />
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/search">
             <img src={search} alt="rasm" className="w-[24px] h-[24px]" />
           </NavLink>
           <NavLink to="/basket">

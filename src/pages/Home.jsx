@@ -7,7 +7,7 @@ import Latest from "../components/Latest";
 import Products from "../components/Products";
 import Timer from "../components/Timer";
 import Discount from "../components/Discount";
-import Search from "../components/Search";
+import SearchComp from "../components/SearchComp";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <div className="pb-[80px]">
         <div className="w-[100%] m-auto pt-[10px]">
           <Navbar />
-          <Search />
+          <SearchComp />
           <CarouselComponent />
         </div>
         <div className="relative w-[100%] h-[105px] mt-[30px]">
