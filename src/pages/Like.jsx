@@ -59,31 +59,37 @@ const Like = () => {
                   key={item.id}
                   className="w-full h-[130px] rounded-[12px] bg-[#140D2B] flex items-center justify-between px-[15px]"
                 >
-                  <div
-                    onClick={() => handleCardClick(item.id)}
-                    className="w-[100px] h-[100px] rounded-[10px] bg-white border cursor-pointer"
-                  >
-                    <img
-                      src={item.image}
-                      alt="rasm"
-                      className="w-full h-full object-fill rounded-[10px]"
-                    />
-                  </div>
+                  <NavLink to="/singleproduct">
+                    <div
+                      onClick={() => handleCardClick(item.id)}
+                      className="w-[100px] h-[100px] rounded-[10px] bg-white border cursor-pointer"
+                    >
+                      <img
+                        src={item.image}
+                        alt="rasm"
+                        className="w-full h-full object-fill rounded-[10px]"
+                      />
+                    </div>
+                  </NavLink>
 
                   <div>
-                    <p
-                      onClick={() => handleCardClick(item.id)}
-                      className="text-[#fff] font-medium font-poppins text-[18px] leading-[27px] cursor-pointer"
-                    >
-                      {item.name} {/* O'zgartirdim, item.name ni qo'shdim */}
-                    </p>
-                    <p
-                      onClick={() => handleCardClick(item.id)}
-                      className="text-[#fff] mb-[26px] font-medium font-poppins text-[14px] leading-[17px] cursor-pointer"
-                    >
-                      ${item.price.toFixed(2)}{" "}
-                      {/* O'zgartirdim, item.price ni qo'shdim */}
-                    </p>
+                    <NavLink to="/singleproduct">
+                      <p
+                        onClick={() => handleCardClick(item.id)}
+                        className="text-[#fff] font-medium font-poppins text-[18px] leading-[27px] cursor-pointer"
+                      >
+                        {item.name} {/* O'zgartirdim, item.name ni qo'shdim */}
+                      </p>
+                    </NavLink>
+                    <NavLink to="/singleproduct">
+                      <p
+                        onClick={() => handleCardClick(item.id)}
+                        className="text-[#fff] mb-[26px] font-medium font-poppins text-[14px] leading-[17px] cursor-pointer"
+                      >
+                        ${item.price.toFixed(2)}{" "}
+                        {/* O'zgartirdim, item.price ni qo'shdim */}
+                      </p>
+                    </NavLink>
                     <div className="w-[210px] flex items-end justify-between">
                       <div>
                         <p className="text-[#fff] mb-[5px] font-medium font-poppins text-[12px] leading-[9.6px]">

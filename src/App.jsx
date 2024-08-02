@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Account from "./pages/Account";
 import Basket from "./pages/Basket";
-// import Cart from "./pages/Cart";
 import Category from "./pages/Category";
 import Checkout from "./pages/Checkout";
 import Single_product from "./pages/Single_product";
@@ -26,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div className="w-[100%] m-auto bg-[#080020]">
+      <div className="w-[100%] max-w-[450px] m-auto bg-[#080020]">
         <div className="w-[100%] m-auto">
           <ShopContext.Provider value={{ shop, setShop }}>
             <LikeContext.Provider value={{ likedd, setLikedd }}>
@@ -38,7 +37,6 @@ function App() {
                       <Route path="/profile" element={<Profile />} />
                       <Route path="/account" element={<Account />} />
                       <Route path="/basket" element={<Basket />} />
-                      {/* <Route path="/cart" element={<Cart />} /> */}
                       <Route path="/category" element={<Category />} />
                       <Route path="/search" element={<Search />} />
                       <Route
