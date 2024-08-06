@@ -11,6 +11,7 @@ import Tops from "./pages/Tops";
 import Like from "./pages/Like";
 import ShopByCategory from "./pages/ShopByCategory";
 import Search from "./pages/Search";
+import Confirmation from "./components/Confirmation";
 
 export const LikeContext = createContext();
 export const ShopContext = createContext();
@@ -23,6 +24,7 @@ function App() {
   const [product, setProduct] = useState([]);
   const [userInfo, setUserInfo] = useState({});
 
+  
   return (
     <>
       <div className="w-[100%] max-w-[450px] m-auto bg-[#080020]">
@@ -50,6 +52,7 @@ function App() {
                       />
                       <Route path="/tops" element={<Tops />} />
                       <Route path="/like" element={<Like />} />
+                      <Route path="/confirmation" element={<Confirmation />} />
                     </Routes>
                   </BrowserRouter>
                 </LoginContext.Provider>
