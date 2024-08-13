@@ -3,8 +3,10 @@ import { IoClose } from "react-icons/io5";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LoginContext } from "../App";
 import axios from "axios";
+import { BaseURL } from "../App";
 
 const Login_modal = ({ handlevoyti }) => {
+  const { URL } = useContext(BaseURL);
   const [activeTab, setActiveTab] = useState("login");
 
   const openTab = (tabName) => {
@@ -28,18 +30,21 @@ const Login_modal = ({ handlevoyti }) => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      const baseUrl =
-        "http://ec2-51-20-131-105.eu-north-1.compute.amazonaws.com:8080";
       axios
-        .post(baseUrl + "/api/auth/register", {
+        .post(URL + "/api/auth/register", {
           email: email,
           password: password,
           age: age,
         })
         .then((resp) => {
           if (resp.status === 200) {
-            localStorage.setItem("confirmation-token", resp.data);
-            // navigate("/confirmation");
+            console.log(resp.data);
+
+            localStorage.setItem(
+              "confirmation-token",
+              resp.data.confirmationToken
+            );
+            navigate("/confirmation");
           }
         })
         .catch((e) => {
@@ -58,10 +63,8 @@ const Login_modal = ({ handlevoyti }) => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      const baseUrl =
-        "http://ec2-51-20-131-105.eu-north-1.compute.amazonaws.com:8080";
       axios
-        .post(baseUrl + "/api/auth/login", {
+        .post(URL + "/api/auth/login", {
           email: email,
           password: password,
         })
@@ -208,15 +211,15 @@ const Login_modal = ({ handlevoyti }) => {
               />
             </div>
             <div className="form-group">
-              <NavLink to="/confirmation">
-                <button
-                  onClick={handleRegister}
-                  type="submit"
-                  className="w-full py-2 bg-white text-black rounded-md font-semibold hover:bg-black hover:text-white transition-all"
-                >
-                  Register
-                </button>
-              </NavLink>
+              {/* <NavLink to="/confirmation"> */}
+              <button
+                onClick={handleRegister}
+                type="submit"
+                className="w-full py-2 bg-white text-black rounded-md font-semibold hover:bg-black hover:text-white transition-all"
+              >
+                Register
+              </button>
+              {/* </NavLink> */}
             </div>
           </form>
         </div>

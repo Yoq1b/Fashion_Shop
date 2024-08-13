@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext   } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import confirmation from "/assets/confirmation.png";
 import { SiSimplelogin } from "react-icons/si";
 import { IoIosArrowBack } from "react-icons/io";
 import axios from "axios";
-import { South } from "@mui/icons-material";
+import { BaseURL } from "../App";
 
 const Confirmation = () => {
   const navigate = useNavigate();
@@ -18,12 +18,12 @@ const Confirmation = () => {
     setConfirmationCode(e.target.value);
   };
 
+  const { URL } = useContext(BaseURL);
+
   const handleSubmit = () => {
-    const baseUrl =
-      "http://ec2-51-20-131-105.eu-north-1.compute.amazonaws.com:8080";
     axios
       .post(
-        baseUrl + "/api/auth/confirmation",
+        URL + "/api/auth/confirmation",
         {
           code: confirmationCode,
         },
@@ -36,7 +36,7 @@ const Confirmation = () => {
       .then((resp) => {
         if (resp.status === 201) {
           console.log(resp.data);
-           navigate("/profile");
+          navigate("/profile");
         }
       })
       .catch((e) => {
