@@ -94,7 +94,7 @@ const Login_modal = ({ handlevoyti }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="mmodal [background-size:100%_100%] bg-no-repeat w-[100%] p-5 h-[400px] bg-opacity-75  rounded-[15px] shadow-lg">
+      <div className="mmodal [background-size:100%_100%] bg-no-repeat w-[100%] max-w-[500px] p-5 h-[400px] bg-opacity-75  rounded-[15px] shadow-lg">
         <div className="flex items-center justify-end">
           <IoClose
             onClick={handlevoyti} // handleClose funksiyasini chaqiring

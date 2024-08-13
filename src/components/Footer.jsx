@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="fixed bottom-0 left-1/2 transform bg-[#080020] z-30 -translate-x-1/2 w-[100%] max-w-[450px] m-auto px-[10px]">
+      <div className="fixed bottom-0 left-1/2 transform bg-[#080020] z-30 -translate-x-1/2 w-[100%] max-w-[500px] m-auto px-[10px]">
         <div className="w-[100%] h-[60px] bg-[#080020] flex items-center justify-between px-[18px]">
           <NavLink to="/">
             <img src={home} alt="rasm" className="w-[24px] h-[24px]" />
