@@ -46,7 +46,7 @@ const Confirmation = () => {
 
   return (
     <>
-      <div className="w-[100%] h-[100%] bg-[#080020] fixed z-50 top-0 left-0 ">
+      <div className="w-[100%] max-w-[500px] h-[100%] bg-[#080020] fixed z-50 top-0 left-0 ">
         {/* ----- */}
         <div className="flex items-center mt-[10px] gap-[5px] mb-[15px]">
           <div
